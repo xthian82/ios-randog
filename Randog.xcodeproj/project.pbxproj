@@ -61,12 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				86225ABE23CF4025008DE7D6 /* Model */,
-				86225AA823CF3E68008DE7D6 /* AppDelegate.swift */,
-				86225AAA23CF3E68008DE7D6 /* SceneDelegate.swift */,
-				86225AAC23CF3E68008DE7D6 /* ViewController.swift */,
-				86225AAE23CF3E68008DE7D6 /* Main.storyboard */,
-				86225AB123CF3E69008DE7D6 /* Assets.xcassets */,
-				86225AB323CF3E69008DE7D6 /* LaunchScreen.storyboard */,
+				863254BC23CFAA5700C8E38C /* Controller */,
+				863254BD23CFAA6700C8E38C /* View */,
 				86225AB623CF3E69008DE7D6 /* Info.plist */,
 			);
 			path = Randog;
@@ -79,6 +75,26 @@
 				86225ABF23CF405D008DE7D6 /* DogImage.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		863254BC23CFAA5700C8E38C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				86225AA823CF3E68008DE7D6 /* AppDelegate.swift */,
+				86225AAA23CF3E68008DE7D6 /* SceneDelegate.swift */,
+				86225AAC23CF3E68008DE7D6 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		863254BD23CFAA6700C8E38C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				86225AAE23CF3E68008DE7D6 /* Main.storyboard */,
+				86225AB123CF3E69008DE7D6 /* Assets.xcassets */,
+				86225AB323CF3E69008DE7D6 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
