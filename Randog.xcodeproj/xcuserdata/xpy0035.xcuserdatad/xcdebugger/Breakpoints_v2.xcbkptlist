@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0E2E0A2D-9F90-4B6A-9EC5-554280B3D58D"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "21D7AB9A-99D9-4204-BD21-D73DC97F9D0D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Randog/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BCE1808E-9F18-4B35-9AAF-C281ACB0066A"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Randog/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "loadImage(url:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "BCE1808E-9F18-4B35-9AAF-C281ACB0066A - d91eb11e6c25683f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Randog.ViewController.(loadImage in _1613AC5077C190E4B3176108514BC5A2)(url: Foundation.URL) -&gt; ()"
+                  moduleName = "Randog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpy0035/workspace-ios/Randog/Randog/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "90">
+               </Location>
+               <Location
+                  uuid = "BCE1808E-9F18-4B35-9AAF-C281ACB0066A - 4787484373c6657a"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Foundation.URL&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Randog.ViewController.(loadImage in _1613AC5077C190E4B3176108514BC5A2)(url: Foundation.URL) -&gt; ()"
+                  moduleName = "Randog"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/xpy0035/workspace-ios/Randog/Randog/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "33"
+                  endingLineNumber = "33"
+                  offsetFromSymbolStart = "211">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
