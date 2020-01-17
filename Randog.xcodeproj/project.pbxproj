@@ -15,6 +15,7 @@
 		86225AB523CF3E69008DE7D6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86225AB323CF3E69008DE7D6 /* LaunchScreen.storyboard */; };
 		86225ABD23CF3E85008DE7D6 /* DogAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86225ABC23CF3E85008DE7D6 /* DogAPI.swift */; };
 		86225AC023CF405D008DE7D6 /* DogImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86225ABF23CF405D008DE7D6 /* DogImage.swift */; };
+		86E4B2F223D234A000A3D938 /* BreedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 86E4B2F123D234A000A3D938 /* BreedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		86225AB623CF3E69008DE7D6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		86225ABC23CF3E85008DE7D6 /* DogAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogAPI.swift; sourceTree = "<group>"; };
 		86225ABF23CF405D008DE7D6 /* DogImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImage.swift; sourceTree = "<group>"; };
+		86E4B2F123D234A000A3D938 /* BreedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				86225ABC23CF3E85008DE7D6 /* DogAPI.swift */,
 				86225ABF23CF405D008DE7D6 /* DogImage.swift */,
+				86E4B2F123D234A000A3D938 /* BreedList.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -172,6 +175,7 @@
 				86225AC023CF405D008DE7D6 /* DogImage.swift in Sources */,
 				86225AA923CF3E68008DE7D6 /* AppDelegate.swift in Sources */,
 				86225AAB23CF3E68008DE7D6 /* SceneDelegate.swift in Sources */,
+				86E4B2F223D234A000A3D938 /* BreedList.swift in Sources */,
 				86225ABD23CF3E85008DE7D6 /* DogAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

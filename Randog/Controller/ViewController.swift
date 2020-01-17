@@ -11,12 +11,22 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var pickerView: UIPickerView!
-    let breeds: [String] = ["greyhound", "poodle", "hound"]
+    var breeds: [String] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pickerView.delegate = self
         pickerView.dataSource = self
+        
+        DogAPI.requestBreedList(completionHandler: self.handleBreedList(list:error:))
+    }
+    
+    func handleBreedList(list: [String], error: Error?) {
+        self.breeds = list
+        
+        DispatchQueue.main.async {
+            self.pickerView.reloadAllComponents()
+        }
     }
     
     func handleRandomImageResponse(dogImage: DogImage?, error: Error?) {
