@@ -10,13 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var pickerView: UIPickerView!
+    let breeds: [String] = ["greyhound", "poodle", "hound"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    }
-    
-    @IBAction func getImage() {
-        DogAPI.requestRandomImage(completionHandler: self.handleRandomImageResponse(dogImage:error:))
+        pickerView.delegate = self
+        pickerView.dataSource = self
     }
     
     func handleRandomImageResponse(dogImage: DogImage?, error: Error?) {
@@ -24,7 +24,6 @@ class ViewController: UIViewController {
             print("no image")
             return
         }
-        
         DogAPI.requestImageFile(
             url: imageUrl,
             completionHandler: self.handleImageFileResponse(image:error:)
@@ -38,3 +37,22 @@ class ViewController: UIViewController {
     }
 }
 
+extension ViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return breeds.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return breeds[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        DogAPI.requestRandomImage(breed: breeds[row], completionHandler: self.handleRandomImageResponse(dogImage:error:))
+        
+    }
+}

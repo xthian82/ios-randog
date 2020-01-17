@@ -13,30 +13,42 @@ class DogAPI {
 
     static let DECODER = JSONDecoder()
     
-    enum Endpoint: String {
-        case randomImageFromAllDogsCollection = "https://dog.ceo/api/breeds/image/random"
+    enum Endpoint {
+        case randomImageFromAllDogsCollection
+        case randomImageForBreed(String)
         
         var url: URL {
-            return URL(string: self.rawValue)!
+            return URL(string: self.stringValue)!
+        }
+        
+        var stringValue: String {
+            switch self {
+            case .randomImageFromAllDogsCollection:
+                return "https://dog.ceo/api/breeds/image/random"
+            case .randomImageForBreed(let breed):
+                return "https://dog.ceo/api/breed/\(breed)/images/random"
+            default:
+                return ""
+            }
         }
     }
     
-    class func requestRandomImage(completionHandler: @escaping (DogImage?, Error?) -> Void) {
-        let endpoint = Endpoint.randomImageFromAllDogsCollection.url
-        let task = URLSession.shared.dataTask(with: endpoint, completionHandler: {(data, response, error) in
+    class func requestRandomImage(breed: String, completionHandler: @escaping (DogImage?, Error?) -> Void) {
+        let endpoint = Endpoint.randomImageForBreed(breed).url
+        let task = URLSession.shared.dataTask(with: endpoint, completionHandler: {(data, res, err) in
             guard let data = data else {
-                completionHandler(nil, error)
+                completionHandler(nil, err)
                 return
             }
             do {
                 let imageData = try DECODER.decode(DogImage.self, from: data)
                 guard let _: String = imageData.message else {
-                    completionHandler(nil, error)
+                    completionHandler(nil, err)
                     return
                 }
                 completionHandler(imageData, nil)
             } catch {
-                completionHandler(nil, error)
+                completionHandler(nil, err)
             }
         })
         task.resume()
